@@ -29,4 +29,4 @@ echo$livre1->getInfos()."<br>";
 
 var_dump($auteur1);
 
-echo afficherBibliographie($auteur1);
+echo afficherBibliographie($livre1);

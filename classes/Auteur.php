@@ -61,8 +61,9 @@ public function __construct(string $nom, string $prenom, string $dateNaissance) 
     }
 
  // *permet d'afficher la bibliographie   
-    public function afficherBibliographie($auteur) {
-        $this->livres[] =$livre;
+    public function afficherBibliographie($livres) {
+        
+        foreach (Livre as $livre)
         return $this;
     }
 
