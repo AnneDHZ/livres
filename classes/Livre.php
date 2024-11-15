@@ -70,10 +70,17 @@ class Livre {
         return $this;
     }
 
-    // *fonctions 
+    // *fonction pour avoir toutes les informations du livre
     public function getInfos(){
-        return $this." écrit par ".$this->auteur. " en " .$this->getDateParution(). " contient " .$this->getNbPages(). " et coûte " . $this->getPrix(). " €.";
+        return $this." écrit par ".$this->auteur. " en " .$this->getDateParution(). " contient " .$this->getNbPages()." nombre de pages "." et coûte " . $this->getPrix(). " €. <br>";
     }
+    
+    // * fonction pour avoir les infos dans une bibliographie
+    public function getInfosBiblio(){
+        return $this." paru en " .$this->getDateParution(). " contient " .$this->getNbPages()." nombre de pages ". " et coûte " . $this->getPrix(). " €. <br>";
+    }
+
+
 
     // *__toString
     public function __toString(){

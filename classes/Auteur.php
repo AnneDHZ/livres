@@ -17,19 +17,19 @@ public function __construct(string $nom, string $prenom, string $dateNaissance) 
 }
 
 // * getter setter
-    public function getNom()
+    public function getNom():string
     {
         return $this->nom;
     }
-
-    public function setNom($nom)
+    
+    public function setNom($nom) 
     {
         $this->nom = $nom;
 
         return $this;
     }
 
-    public function getPrenom()
+    public function getPrenom() :string
     {
         return $this->prenom;
     }
@@ -41,7 +41,7 @@ public function __construct(string $nom, string $prenom, string $dateNaissance) 
         return $this;
     }
 
-    public function getDateNaissance()
+    public function getDateNaissance() :Datetime
     {
         return $this->dateNaissance;
     }
@@ -53,6 +53,17 @@ public function __construct(string $nom, string $prenom, string $dateNaissance) 
         return $this;
     }
 
+    public function getLivres() :array
+    {
+        return $this->livres;
+    }
+
+    public function setLivres($livres)
+    {
+        $this->livres = $livres;
+
+        return $this;
+    }
 
     // * autres fonctions
 // *permet d'intégrer un nouveau livre dans le tableau livre
@@ -61,10 +72,13 @@ public function __construct(string $nom, string $prenom, string $dateNaissance) 
     }
 
  // *permet d'afficher la bibliographie   
-    public function afficherBibliographie($livres) {
+    public function afficherBibliographie() {
+        $result = "<h2> Bibliographie de $this </h2><br>";
         
-        foreach (Livre as $livre)
-        return $this;
+        foreach ($this->livres as $livre){
+        $result .= $livre->getInfosBiblio();
+        }
+        return $result;
     }
 
     // *__toString
@@ -72,6 +86,8 @@ public function __construct(string $nom, string $prenom, string $dateNaissance) 
         return $this->nom." ".$this->prenom;
     }
 
+
+    
 }
 
 

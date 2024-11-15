@@ -21,12 +21,12 @@ $livre2 = new Livre("Emma", "576", 1815, 22.95, $auteur1);
 $livre3 = new Livre("Les misérables", "576", "1862", 16.95, $auteur2);
 $livre4 = new Livre("Claude Gueux", "576", "1834", 32.95, $auteur2);
 
-var_dump($livre2);
+// var_dump($livre2);
 
-echo $livre1->getDateParution() ."<br>";
-echo $auteur1->getDateNaissance()->format("Y")."<br>";
-echo$livre1->getInfos()."<br>";
+// echo $livre1->getDateParution() ."<br>";
+// echo $auteur1->getDateNaissance()->format("Y")."<br>";
+// echo$livre1->getInfos()."<br>";
 
-var_dump($auteur1);
+// var_dump($auteur1);
 
-echo afficherBibliographie($livre1);
+echo $auteur1->afficherBibliographie();
